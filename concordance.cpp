@@ -1,7 +1,5 @@
 //
-// Christopher Harrod
 // Concordance problem
-// Nov 2012
 //
 
 #include <iostream>

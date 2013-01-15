@@ -16,9 +16,9 @@ class WordCounter
 public:
 	int value;
 	vector<int> sentences;
-    WordCounter() : value( 0 ) {}
+	WordCounter() : value( 0 ) {}
 	
-    void operator++ (int) { value++; }
+	void operator++ (int) { value++; }
 	void push_back (int sentenceNum) { sentences.push_back( sentenceNum ); }
 };
 
@@ -83,7 +83,7 @@ int main (int argc, char * const argv[]) {
 		}
 		
 		// Remove non-alpha characters from string
-        s.resize( remove_if( s.begin(), s.end(), filter ) - s.begin() );
+		s.resize( remove_if( s.begin(), s.end(), filter ) - s.begin() );
 		
 		// Convert token to lowercase and insert
 		transform( s.begin(), s.end(), s.begin(), ::tolower );
@@ -93,7 +93,7 @@ int main (int argc, char * const argv[]) {
 	}
 	
 	// Output results
-    map<string, WordCounter>::iterator it;
+	map<string, WordCounter>::iterator it;
 	
 	for ( it = concordance.begin(); it != concordance.end(); it++ ) {
 		cout << it->first << "\t" << it->second << endl;
